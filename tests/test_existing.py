@@ -58,5 +58,13 @@ class ExistingContracts(unittest.TestCase):
     def test_group_presence(self):
         self.assertEqual(len(group_rows([{},dict(x=None)],['x'])),2)
 
+    def test_probability_source_and_replicate_axis(self):
+        rows=self.study.tables['responses']
+        self.assertEqual(survey.weighted_unmet(rows),1)
+        self.assertEqual(survey.replicate_columns(rows),[[2],[4]])
+        bad=[dict(rows[0]),dict(rows[0],replicate_weights=[1])]
+        with self.assertRaises(ValueError):
+            survey.replicate_columns(bad)
+
 if __name__=='__main__':
     unittest.main()

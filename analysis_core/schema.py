@@ -1,0 +1,1 @@
+SCHEMA = {'responses': ['response', 'source', 'person', 'candidate_group', 'district', 'age', 'urban', 'sex', 'unmet', 'weight', 'stratum', 'psu', 'replicate_weights'], 'margins': ['margin', 'cells', 'lower', 'upper'], 'links': ['left', 'right', 'relation']}

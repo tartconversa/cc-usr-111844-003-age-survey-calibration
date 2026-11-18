@@ -1,0 +1,58 @@
+{
+  "name": "age-survey-calibration",
+  "tables": {
+    "responses": [
+      {
+        "response": "r1",
+        "source": "household",
+        "person": "p1",
+        "candidate_group": null,
+        "district": "a",
+        "age": "80+",
+        "urban": false,
+        "sex": "f",
+        "unmet": 1,
+        "weight": 3,
+        "stratum": "s",
+        "psu": "u1",
+        "replicate_weights": [
+          2,
+          4
+        ]
+      },
+      {
+        "response": "r2",
+        "source": "web",
+        "person": null,
+        "candidate_group": "g1",
+        "district": "a",
+        "age": "60-69",
+        "urban": true,
+        "sex": "m",
+        "unmet": 0,
+        "weight": null,
+        "stratum": null,
+        "psu": null,
+        "replicate_weights": null
+      }
+    ],
+    "margins": [
+      {
+        "margin": "m1",
+        "cells": {
+          "district": "a"
+        },
+        "lower": 100,
+        "upper": 100
+      }
+    ],
+    "links": []
+  },
+  "options": {
+    "design": {
+      "method": "BRR",
+      "replicates": 2,
+      "fay": 0
+    }
+  }
+}
